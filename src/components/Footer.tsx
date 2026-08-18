@@ -11,9 +11,12 @@ export function Footer() {
         <div className="grid gap-12 border-t border-sand pt-14 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <Link to="/" className="flex items-center gap-2 text-ink">
-              <LogoMark className="h-7 w-7" />
-              <span className="font-display text-xl">DriveOn</span>
-            </Link>
+  <img
+    src="/images/logo1.png"
+    alt="DriveOn"
+    className="h-7 w-auto object-contain"
+  />
+</Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-mute">{t("footer.blurb")}</p>
           </div>
           <div>

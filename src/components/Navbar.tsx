@@ -5,6 +5,7 @@ import { useCopy } from "../i18n";
 import { langLabels, type Lang } from "../translations";
 import { useScrolled } from "../hooks";
 import { useBooking } from "../booking";
+import logo from "/images/logo1.png";
 
 const links = [
   { to: "/", key: "home" as const },
@@ -32,12 +33,17 @@ export function Navbar() {
         }`}
       >
         <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between gap-4 px-5 sm:px-8">
-          <NavLink to="/" className={`flex items-center gap-2.5 ${solid ? "text-ink" : "text-cream"}`}>
-            <LogoMark className="h-8 w-8" />
-            <span className="font-display text-[1.25rem] leading-none tracking-tight">
-              DriveOn
-            </span>
-          </NavLink>
+<NavLink
+  to="/"
+  className={`flex items-center gap-2.5 ${solid ? "text-ink" : "text-cream"}`}
+>
+  <img
+    src={logo}
+    alt="DriveOn"
+    className="h-8 w-auto object-contain"
+  />
+
+</NavLink>
 
           <nav className="hidden items-center gap-6 lg:flex">
             {links.map((l) => (
